@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anubhav | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="google-site-verification" content="bAOjT7HpUie_W7PiApNtYCT4f3seRCX-a8Etqe-rFC8" />
 </head>
 
 <body>
@@ -199,63 +200,61 @@
  
     <hr>
 
+<section id="contact">
 
-    <!-- CONTACT -->
-    <section id="contact">
+    <h2>Let's Connect</h2>
 
-        <h2>Contact Me</h2>
+    <p>
+        Have a project idea or want to connect?
+        Feel free to send me a message.
+    </p>
 
-        <p>
-            Want to work with me or have a question?
-            Feel free to contact me.
-        </p>
+    <form action="https://formspree.io/f/mzeblggn" method="POST">
 
-
-        <form>
-
-            <label for="name">Your Name:</label>
-            <br>
-            <input type="text" id="name" name="name"
-                   placeholder="Enter your name">
-
-            <br><br>
-
-
-            <label for="email">Youremail:</label>
-            <br>
-            <input type="email" id="email" name="email"
-                   placeholder="Enter your email">
-
-            <br><br>
-
-
-            <label for="message">Your Message:</label>
-            <br>
-            <textarea id="message" name="message"
-                      rows="5" cols="30"
-                      placeholder="Write your message"></textarea>
-
-            <br><br>
-
-            <input type="submit" value="Send Message">
-
-        </form>
-
-
+        <label for="name">Name</label>
         <br>
+        <input 
+            type="text" 
+            id="name" 
+            name="name"
+            placeholder="Your Name"
+            required
+        >
 
-        <p>
-            Or email me directly:
-        </p>
+        <br><br>
 
-        <!-- Replace this with your real email -->
-        <a href="mailto:your-email@gmail.com">
-            your-anubhavmishra2662@gmail.com
-        </a>
+        <label for="email">Email</label>
+        <br>
+        <input 
+            type="email" 
+            id="email" 
+            name="email"
+            placeholder="Your Email"
+            required
+        >
 
-    </section>
+        <br><br>
 
-    <hr>
+        <label for="message">Message</label>
+        <br>
+        <textarea 
+            id="message" 
+            name="message"
+            placeholder="Write your message..."
+            rows="6"
+            required
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+
+<hr>    
 
 
     <!-- FOOTER -->
