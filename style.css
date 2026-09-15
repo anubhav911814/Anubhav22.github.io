@@ -1,501 +1,572 @@
-/* =========================
-   ANUBHAV PORTFOLIO
-   PREMIUM DARK DESIGN
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --bg: #050816;
-    --bg2: #0b1020;
-    --card: rgba(255, 255, 255, 0.055);
-    --border: rgba(255, 255, 255, 0.12);
-    --text: #f8fafc;
-    --muted: #a8b2c3;
-    --blue: #38bdf8;
-    --purple: #8b5cf6;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 15% 10%, rgba(56,189,248,.13), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(139,92,246,.13), transparent 28%),
-        var(--bg);
-    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    background: #0a192f;
+    color: #ccd6f6;
     line-height: 1.7;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ---------- GENERAL ---------- */
+
+a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+p {
+    color: #8892b0;
+}
+
+h1,
+h2,
+h3 {
+    color: #ccd6f6;
+    line-height: 1.2;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #233554;
+}
+
+/* ---------- HEADER ---------- */
 
 header {
     position: sticky;
     top: 0;
-    z-index: 999;
-    padding: 18px 7%;
-    text-align: center;
-    background: rgba(5, 8, 22, 0.82);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background: rgba(10, 25, 47, 0.88);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(35, 53, 84, 0.7);
 }
 
 header h1 {
-    font-size: 32px;
-    letter-spacing: 1px;
-    background: linear-gradient(90deg, var(--blue), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
+    color: #ccd6f6;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
+    gap: 28px;
 }
 
 nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    padding: 7px 13px;
-    border-radius: 8px;
-    transition: .3s ease;
+    color: #8892b0;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 nav a:hover {
-    color: white;
-    background: rgba(56,189,248,.12);
-    transform: translateY(-2px);
+    color: #64ffda;
 }
 
-header hr,
-section + hr {
-    display: none;
-}
-
-/* =========================
-   GENERAL SECTION
-========================= */
+/* ---------- SECTIONS ---------- */
 
 section {
-    width: 86%;
-    max-width: 1100px;
+    width: min(1100px, 86%);
     margin: auto;
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
-section h2 {
-    font-size: 40px;
-    margin-bottom: 28px;
-    background: linear-gradient(90deg, #fff, var(--blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-section p {
-    color: var(--muted);
-    font-size: 17px;
-    max-width: 800px;
-    margin-bottom: 15px;
-}
-
-/* =========================
-   HOME / HERO
-========================= */
+/* ---------- HOME ---------- */
 
 #home {
     min-height: 88vh;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
 }
 
-#home::before {
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: var(--blue);
-    filter: blur(120px);
-    opacity: .15;
-    right: 5%;
-    top: 25%;
-    pointer-events: none;
+#home > * {
+    max-width: 650px;
 }
 
 #home h2 {
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.05;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 800;
+    letter-spacing: -5px;
+    color: #e6f1ff;
+
     margin-bottom: 18px;
-    background: linear-gradient(90deg, #ffffff, #7dd3fc, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 #home h3 {
-    font-size: 26px;
-    color: var(--blue);
-    margin-bottom: 22px;
+    font-size: clamp(22px, 3vw, 30px);
+    color: #64ffda;
+
+    margin-bottom: 25px;
 }
 
 #home p {
-    font-size: 19px;
-    max-width: 720px;
+    max-width: 620px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 #home a {
     display: inline-block;
-    width: fit-content;
-    margin-top: 15px;
-    margin-right: 8px;
-    padding: 13px 23px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #03101a;
-    background: linear-gradient(135deg, var(--blue), #7dd3fc);
-    box-shadow: 0 10px 30px rgba(56,189,248,.18);
-    transition: .3s ease;
+
+    margin-top: 28px;
+    margin-right: 10px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #64ffda;
 }
 
 #home a:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(56,189,248,.3);
+    background: rgba(100, 255, 218, 0.08);
+    transform: translateY(-3px);
 }
 
-#home br {
-    display: none;
+/* ---------- PHOTO ---------- */
+
+#home img {
+    width: 300px;
+    height: 370px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 1px solid #64ffda;
+
+    box-shadow:
+        15px 15px 0 #112d4e,
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    filter: grayscale(15%);
+
+    transition: 0.4s ease;
 }
 
-/* =========================
-   ABOUT
-========================= */
+#home img:hover {
+    transform: translate(-5px, -5px);
+    box-shadow:
+        20px 20px 0 #153b5f,
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    filter: grayscale(0%);
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+
+#about h2,
+#skills h2,
+#projects h2,
+#youtube h2,
+#contact h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+}
+
+/* ---------- ABOUT ---------- */
 
 #about {
-    width: 100%;
-    max-width: none;
-    padding-left: 7%;
-    padding-right: 7%;
-    background: rgba(255,255,255,.025);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-top: 1px solid #233554;
 }
 
 #about p {
-    max-width: 850px;
+    max-width: 760px;
+    font-size: 17px;
+    margin-bottom: 20px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* ---------- SKILLS ---------- */
+
+#skills {
+    border-top: 1px solid #233554;
+}
 
 #skills ul {
     list-style: none;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 35px;
+
+    gap: 15px;
 }
 
 #skills li {
-    padding: 25px;
-    border-radius: 16px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: #e2e8f0;
-    font-size: 18px;
-    font-weight: bold;
-    backdrop-filter: blur(10px);
-    transition: .3s ease;
+    padding: 23px;
+
+    background: #112240;
+
+    border: 1px solid #233554;
+    border-radius: 6px;
+
+    color: #ccd6f6;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
 }
 
 #skills li::before {
-    content: "✦";
-    color: var(--blue);
-    margin-right: 10px;
+    content: "▹ ";
+    color: #64ffda;
 }
 
 #skills li:hover {
-    transform: translateY(-7px);
-    border-color: rgba(56,189,248,.5);
-    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+    transform: translateY(-5px);
+    border-color: #64ffda;
+    background: #132a4a;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* Old Video Editing item hide */
+#skills li:nth-child(4) {
+    display: none;
+}
+
+/* ---------- PROJECTS ---------- */
+
+#projects {
+    border-top: 1px solid #233554;
+}
 
 #projects article {
-    padding: 28px;
-    margin: 20px 0;
-    border-radius: 18px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(10px);
-    transition: .3s ease;
+    padding: 32px;
+
+    margin-top: 18px;
+
+    background: #112240;
+
+    border: 1px solid #233554;
+    border-radius: 6px;
+
+    transition: 0.35s ease;
 }
 
 #projects article:hover {
     transform: translateY(-6px);
-    border-color: rgba(56,189,248,.45);
-    box-shadow: 0 15px 40px rgba(0,0,0,.3);
+    border-color: #64ffda;
+    box-shadow: 0 20px 50px rgba(2, 12, 27, 0.4);
 }
 
-#projects h3 {
-    color: white;
-    font-size: 23px;
-    margin-bottom: 8px;
+#projects article h3 {
+    font-size: 22px;
+    color: #e6f1ff;
+
+    margin-bottom: 12px;
 }
 
 #projects article p {
-    margin-bottom: 0;
+    max-width: 720px;
 }
 
-/* =========================
-   YOUTUBE
-========================= */
+/* ---------- YOUTUBE ---------- */
 
 #youtube {
-    width: 100%;
-    max-width: none;
-    padding-left: 7%;
-    padding-right: 7%;
-    background: rgba(255,255,255,.025);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-top: 1px solid #233554;
 }
 
 #youtube article {
-    max-width: 850px;
-    padding: 30px;
-    margin: 25px 0;
-    border-radius: 18px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    transition: .3s ease;
+    display: inline-block;
+    vertical-align: top;
+
+    width: calc(50% - 10px);
+
+    min-height: 240px;
+
+    margin-top: 30px;
+
+    padding: 32px;
+
+    background: #112240;
+
+    border: 1px solid #233554;
+    border-radius: 6px;
+
+    transition: 0.35s ease;
+}
+
+#youtube article + article {
+    margin-left: 12px;
 }
 
 #youtube article:hover {
     transform: translateY(-6px);
-    border-color: rgba(139,92,246,.5);
-    box-shadow: 0 15px 45px rgba(0,0,0,.3);
+    border-color: #64ffda;
 }
 
-#youtube h3 {
-    font-size: 25px;
-    color: white;
-    margin-bottom: 8px;
-}
-
-#youtube article p:nth-of-type(1) {
-    color: var(--blue);
-    font-weight: bold;
-    font-size: 18px;
+#youtube article h3 {
+    color: #e6f1ff;
+    font-size: 22px;
+    margin-bottom: 14px;
 }
 
 #youtube article a {
     display: inline-block;
-    margin-top: 12px;
-    padding: 11px 20px;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-    color: white;
-    text-decoration: none;
-    border-radius: 9px;
-    font-weight: bold;
-    transition: .3s ease;
+
+    margin-top: 18px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
 }
 
 #youtube article a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(239,68,68,.25);
+    background: rgba(100, 255, 218, 0.08);
 }
 
-#youtube > br {
-    display: none;
+/* ---------- CONTACT ---------- */
+
+#contact {
+    border-top: 1px solid #233554;
 }
 
-/* =========================
-   CONTACT
-========================= */
+#contact > p {
+    max-width: 650px;
+    font-size: 16px;
+}
 
-#contact form {
+form {
     max-width: 700px;
-    margin-top: 30px;
+
+    margin-top: 35px;
     padding: 32px;
-    border-radius: 18px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(10px);
+
+    background: #112240;
+
+    border: 1px solid #233554;
+    border-radius: 6px;
 }
 
-#contact label {
-    color: #e2e8f0;
-    font-weight: bold;
+label {
+    color: #ccd6f6;
+
+    font-size: 13px;
+    font-weight: 600;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    margin-top: 7px;
+
     padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #334155;
+
+    margin-top: 6px;
+
+    background: #0a192f;
+
+    color: #ccd6f6;
+
+    border: 1px solid #233554;
+    border-radius: 5px;
+
     outline: none;
-    background: rgba(0,0,0,.25);
-    color: white;
-    font-size: 16px;
-    transition: .3s;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: 0.3s ease;
 }
 
-#contact input[type="text"]:focus,
-#contact input[type="email"]:focus,
-#contact textarea:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgba(56,189,248,.1);
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #64ffda;
 }
 
-#contact textarea {
+textarea {
     resize: vertical;
+    min-height: 140px;
 }
 
-#contact input[type="submit"] {
-    padding: 13px 25px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--blue), #7dd3fc);
-    color: #03101a;
-    font-size: 16px;
-    font-weight: bold;
+input[type="submit"] {
+    padding: 12px 22px;
+
+    background: transparent;
+    color: #64ffda;
+
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 700;
+
     cursor: pointer;
-    transition: .3s ease;
+
+    transition: 0.3s ease;
 }
 
-#contact input[type="submit"]:hover {
+input[type="submit"]:hover {
+    background: rgba(100, 255, 218, 0.08);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(56,189,248,.25);
 }
 
 #contact > a {
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: bold;
+    color: #64ffda;
+    font-weight: 600;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ---------- FOOTER ---------- */
 
 footer {
     text-align: center;
-    padding: 40px 20px;
-    background: #030611;
-    border-top: 1px solid var(--border);
+
+    padding: 55px 20px;
+
+    background: #081426;
+
+    border-top: 1px solid #233554;
 }
 
 footer p {
-    color: #718096;
-    margin: 4px;
+    color: #66748f;
+    font-size: 12px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ---------- TABLET ---------- */
 
-@media (max-width: 768px) {
-
-    header {
-        padding: 16px 4%;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav {
-        gap: 2px;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding: 6px 8px;
-    }
-
-    section {
-        width: 90%;
-        padding: 75px 0;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
+@media (max-width: 900px) {
 
     #home {
-        min-height: 82vh;
+        gap: 40px;
+    }
+
+    #home img {
+        width: 250px;
+        height: 310px;
     }
 
     #home h2 {
-        font-size: 43px;
+        font-size: 65px;
+    }
+
+    #skills ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    section {
+        width: 88%;
+        padding: 90px 0;
+    }
+
+    #home {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding-top: 80px;
+    }
+
+    #home h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        letter-spacing: -4px;
     }
 
     #home h3 {
-        font-size: 21px;
+        font-size: 22px;
     }
 
-    #home p {
-        font-size: 17px;
+    #home img {
+        width: 230px;
+        height: 285px;
+
+        align-self: center;
+
+        margin-top: 50px;
     }
 
     #skills ul {
         grid-template-columns: 1fr;
     }
 
-    #about,
-    #youtube {
-        padding-left: 5%;
-        padding-right: 5%;
+    #youtube article {
+        display: block;
+        width: 100%;
+        margin-left: 0 !important;
     }
 
-    #contact form {
-        padding: 22px;
+    #about h2,
+    #skills h2,
+    #projects h2,
+    #youtube h2,
+    #contact h2 {
+        font-size: 43px;
+        letter-spacing: -2px;
     }
 }
 
-/* =========================
-   SMALL PHONES
-========================= */
+/* ---------- SMALL MOBILE ---------- */
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
 
-    #home h2 {
-        font-size: 37px;
+    section {
+        width: 90%;
     }
 
-    #home h3 {
-        font-size: 18px;
+    #home img {
+        width: 210px;
+        height: 260px;
     }
 
     #home a {
-        padding: 11px 16px;
-        font-size: 14px;
-    }
-
-    section p {
-        font-size: 16px;
-    }
-
-    #projects article,
-    #youtube article {
-        padding: 22px;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
     }
 }
